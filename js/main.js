@@ -1,11 +1,17 @@
 
-const generateBtn = document.getElementById("generateBtn");
-const processInput = document.getElementById("processInput");
 
-generateBtn.addEventListener("click", () => {
-    const input = processInput.value;
+import { parse } from "./parser.js";
 
-    console.log("Process Algebra:", input);
+const input = document.getElementById("processInput");
+const button = document.getElementById("generateBtn");
+const result = document.getElementById("parseResult");
 
-    alert("Input received: " + input);
+button.addEventListener("click", () => {
+  try {
+    const ast = parse(input.value);
+
+    result.textContent = JSON.stringify(ast, null, 2);
+  } catch (error) {
+    result.textContent = "解析錯誤：" + error.message;
+  }
 });
