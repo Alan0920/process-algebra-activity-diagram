@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Diagram Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Process Algebra - Activity Diagram Generator</h1>
+
+    <div class="container">
+        <section class="input-panel">
+            <h2>Process Algebra Input</h2>
+
+            <textarea id="processInput">i1 . i2 . i3 . ◉</textarea>
+
+            <button id="generateBtn">
+                Generate Diagram
+            </button>
+        </section>
+
+        <section class="output-panel">
+            <h2>Activity Diagram</h2>
+
+            <svg id="diagram"
+                 width="100%"
+                 height="500"
+                 xmlns="http://www.w3.org/2000/svg">
+            </svg>
+        </section>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
